@@ -48,4 +48,53 @@ $arr = [
     "floor" => floor($sqrt587),
     "ceil" => ceil($sqrt587)
 ];
-echo nl2br("floor = " . $arr['floor'] . ", ceil = " . $arr['ceil'] . "\n");
+echo nl2br("floor = " . $arr['floor'] . ", ceil = " . $arr['ceil'] . "\n\n");
+
+
+$arr_new = [
+    4,
+    -2,
+    5,
+    19,
+    -130,
+    0,
+    10
+];
+echo nl2br("min = " . min($arr_new) . ", max = " . max($arr_new) . "\n\n");
+
+
+echo nl2br(rand(1, 100) . "\n");
+
+$arr_num = [];
+echo "arr = ";
+for ($i = 0; $i < 10; $i++) { 
+    $arr_num[$i] = rand(1, 100);
+    echo $arr_num[$i] . ', ';
+}
+echo nl2br("\n\n");
+
+
+$a = 1;
+$b = 5;
+echo nl2br(abs($a - $b) . "\n");
+$a = 15;
+$b = 561;
+echo nl2br(abs($a - $b) . "\n") ;
+$a = 3;
+$b = 3;
+echo nl2br(abs($a - $b) . "\n");
+
+$mas = [
+    1, 
+    2, 
+    -1, 
+    -2, 
+    3, 
+    -3
+];
+$mas_new = [];
+echo "mas = ";
+for ($i = 0; $i < sizeof($mas); $i++) { 
+    $mas_new[$i] = abs($mas[$i]);
+    echo $mas_new[$i] . ", ";
+}
