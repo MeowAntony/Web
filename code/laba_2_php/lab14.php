@@ -98,3 +98,41 @@ for ($i = 0; $i < sizeof($mas); $i++) {
     $mas_new[$i] = abs($mas[$i]);
     echo $mas_new[$i] . ", ";
 }
+echo nl2br("\n\n");
+
+$number = 36;
+$index = 0;
+$mas = [];
+for ($i = 1; $i <= $number; $i++) { 
+    if ($number % $i == 0) {
+        $mas[$index] = $i;
+        $index += 1;
+    }
+}
+echo "Делители = ";
+for ($i = 0; $i < sizeof($mas); $i++) { 
+    echo $mas[$i] . ' ';
+}
+echo nl2br("\n");
+$mas = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+];
+$need_sum = 0;
+$sum = 0;
+for ($i = 0; $i < 10; $i++) { 
+    $sum += $mas[$i];
+    $need_sum++;
+    if ($sum > 10) {
+        break;
+    }
+}
+echo "Количество нужных чисел: " . $need_sum;
