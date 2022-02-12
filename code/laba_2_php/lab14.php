@@ -10,10 +10,10 @@ echo nl2br($a % $b . "\n");
 $a = 2000;
 $b = 16;
 if ($a % $b === 0) {
-    echo nl2br("Делится. Результат: " . ($a / $b) . "\n");
+    echo nl2br("Делится. Результат: " . ($a / $b) . "\n\n");
 }
 else {
-    echo nl2br("Делится с остатком. Остаток: " . ($a % $b) . "\n");
+    echo nl2br("Делится с остатком. Остаток: " . ($a % $b) . "\n\n");
 }
 
 
@@ -35,6 +35,17 @@ $sum_numbers = 0;
 foreach ($array as $value) {
     $sum_numbers += $value ** 2;
 }
-echo nl2br("answer = " . sqrt($sum_numbers));
+echo nl2br("answer = " . sqrt($sum_numbers) . "\n\n");
 
 
+$sqrt379 = sqrt(379);
+echo nl2br("0. = " . round($sqrt379, 0) . "\n");
+echo nl2br("0.0 = " . round($sqrt379, 1) . "\n");
+echo nl2br("0.00 = " . round($sqrt379, 2) . "\n");
+
+$sqrt587 = sqrt(587);
+$arr = [
+    "floor" => floor($sqrt587),
+    "ceil" => ceil($sqrt587)
+];
+echo nl2br("floor = " . $arr['floor'] . ", ceil = " . $arr['ceil'] . "\n");
