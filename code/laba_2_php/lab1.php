@@ -10,4 +10,4 @@ $order =& $very_bad_unclear_name;
 
 $order .= " at home";
 
-echo nl2br("\nNew your order is: $$very_bad_unclear_name.");
+echo nl2br("\nNew your order is: $very_bad_unclear_name.");
