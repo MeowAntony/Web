@@ -9,6 +9,9 @@ services:
     links:
       - php
   php:
-    image: php:7-fpm
+    image: php:8-fpm
     volumes:
       - ./code:/code
+      - ./vendor:/vendor
+    env_file:
+      - .env
