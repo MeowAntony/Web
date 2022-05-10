@@ -9,19 +9,19 @@ services:
     links:
       - php
   php:
-    image: php:8-fpm
+    build: .
     volumes:
       - ./code:/code
       - ./vendor:/vendor
+    env_file:
+      - .env
     depends_on:
       - db
     links:
       - db
-    env_file:
-      - .env
   db:
     image: mysql:8.0
     ports:
       - '6603:3306'
-    environment:
-      MYSQL_ROOT_PASSWORD: helloworld
+    env_file:
+      - .env
